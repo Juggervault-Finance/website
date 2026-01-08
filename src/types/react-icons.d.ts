@@ -2,17 +2,17 @@
 // React 18 requires JSX components to return JSX.Element, not ReactNode
 // This overrides the IconType definition to work with React 18
 
-import type { IconBaseProps } from 'react-icons/lib';
+import type { IconBaseProps } from "react-icons/lib";
 
 // Override the IconType to return JSX.Element instead of ReactNode
-declare module 'react-icons/lib' {
+declare module "react-icons/lib" {
   export type IconType = (props: IconBaseProps) => JSX.Element;
 }
 
 // Type for icons that returns JSX.Element
 type IconComponent = (props: IconBaseProps) => JSX.Element;
 
-declare module 'react-icons/fa' {
+declare module "react-icons/fa" {
   export const FaArrowRight: IconComponent;
   export const FaCheckCircle: IconComponent;
   export const FaNetworkWired: IconComponent;
@@ -43,12 +43,11 @@ declare module 'react-icons/fa' {
   export const FaFileContract: IconComponent;
 }
 
-declare module 'react-icons/go' {
+declare module "react-icons/go" {
   export const GoDotFill: IconComponent;
 }
 
-declare module 'react-icons/fa6' {
+declare module "react-icons/fa6" {
   export const FaXTwitter: IconComponent;
   export const FaChevronDown: IconComponent;
 }
-
