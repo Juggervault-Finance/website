@@ -40,13 +40,17 @@ export function Navigation() {
               </Link>
             </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:block">
+            {/* Desktop Navigation - Centered */}
+            <nav className="hidden lg:block flex-1 flex justify-center">
               <ul className="flex items-center justify-center gap-6 xl:gap-10 text-slate-900 font-bold text-sm xl:text-base">
-                <li><PlatformsDropdown /></li>
                 <li>
-                  <Link href="/demo" className="hover:text-blue-600 transition-colors">
-                    Demo
+                  <Link href="/" className="hover:text-blue-600 transition-colors">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/compliance" className="hover:text-blue-600 transition-colors">
+                    Compliance
                   </Link>
                 </li>
                 <li>
@@ -57,14 +61,13 @@ export function Navigation() {
               </ul>
             </nav>
 
+            {/* Platforms Button - Right Side */}
+            <div className="hidden lg:block flex-shrink-0">
+              <PlatformsDropdown buttonStyle="primary" />
+            </div>
+
             {/* Mobile Menu Button */}
             <div className="lg:hidden flex items-center gap-4">
-              <Link
-                href="/demo"
-                className="hidden sm:block rounded-[52px] bg-blue-600 text-white font-semibold px-4 py-2 text-sm hover:bg-blue-700 transition-colors"
-              >
-                Request Demo
-              </Link>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-slate-900 hover:text-blue-600 transition-colors p-2"
@@ -73,16 +76,6 @@ export function Navigation() {
                 {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
               </button>
             </div>
-
-            {/* Desktop CTA Button */}
-            <div className="hidden lg:block">
-              <Link
-                href="/demo"
-                className="rounded-[52px] bg-blue-600 text-white font-semibold px-4 xl:px-6 py-2 xl:py-3 text-sm xl:text-base hover:bg-blue-700 transition-colors inline-block"
-              >
-                Request Demo
-              </Link>
-            </div>
           </div>
 
           {/* Mobile Navigation Menu */}
@@ -90,24 +83,20 @@ export function Navigation() {
             <div className="lg:hidden border-t border-slate-200 bg-white">
               <nav className="px-4 py-4">
                 <ul className="flex flex-col gap-4 text-slate-900 font-bold">
+                  <li>
+                    <Link href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors w-full text-left py-2 block">
+                      Home
+                    </Link>
+                  </li>
                   <li><PlatformsDropdown /></li>
                   <li>
-                    <Link href="/demo" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors w-full text-left py-2 block">
-                      Demo
+                    <Link href="/compliance" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors w-full text-left py-2 block">
+                      Compliance
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors w-full text-left py-2 block">
                       Contact
-                    </Link>
-                  </li>
-                  <li className="pt-2 border-t border-slate-200">
-                    <Link
-                      href="/demo"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="w-full rounded-[52px] bg-blue-600 text-white font-semibold px-6 py-3 hover:bg-blue-700 transition-colors text-center inline-block"
-                    >
-                      Request Demo
                     </Link>
                   </li>
                 </ul>

@@ -82,8 +82,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg md:text-xl mb-1 md:mb-2">Phone</h4>
-                    <a href="tel:+1234567890" className="text-sm md:text-base text-blue-600 hover:underline">
-                      +1 (234) 567-890
+                    <a href="tel:+2347033094100" className="text-sm md:text-base text-blue-600 hover:underline">
+                      +2347033094100
                     </a>
                   </div>
                 </div>
@@ -107,9 +107,9 @@ export default function ContactPage() {
               <h3 className="font-semibold text-xl sm:text-2xl mb-4 md:mb-6">Quick Links</h3>
               <ul className="space-y-3 md:space-y-4">
                 <li>
-                  <Link href="/demo" className="hover:underline flex items-center gap-2 text-sm md:text-base">
+                  <Link href="/#platforms" className="hover:underline flex items-center gap-2 text-sm md:text-base">
                     <FaPaperPlane size={14} />
-                    Request a Demo
+                    Explore Platforms
                   </Link>
                 </li>
                 <li>

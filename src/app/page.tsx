@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FancyButton } from "./(components)/fancy-button";
-import { FaArrowRight, FaBuilding, FaIndustry, FaLandmark, FaGlobe, FaShieldAlt, FaLock, FaExchangeAlt, FaNetworkWired, FaHandshake, FaCheckCircle, FaClipboardCheck, FaProjectDiagram, FaBolt, FaOilCan, FaChartLine, FaMoneyBillWave, FaEye, FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaCode, FaFileContract, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaArrowRight, FaBuilding, FaIndustry, FaLandmark, FaGlobe, FaShieldAlt, FaLock, FaExchangeAlt, FaNetworkWired, FaHandshake, FaCheckCircle, FaClipboardCheck, FaProjectDiagram, FaBolt, FaOilCan, FaChartLine, FaMoneyBillWave, FaEye, FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaCode, FaFileContract, FaLinkedin } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
 import { FaXTwitter } from "react-icons/fa6";
 import {
@@ -15,7 +15,6 @@ import {
   ComplianceVerification,
   AfricaInfrastructureMap,
   founderImage,
-  Logo,
   PexelsPixabay459728,
   PexelsPixabay46169,
   EllipseLockFrame
@@ -64,10 +63,10 @@ export default function Home() {
               Explore the Platform
             </button>
             <Link
-              href="/demo"
+              href="/contact"
               className="w-full sm:w-auto rounded-[52px] bg-white border-2 border-slate-200 text-slate-900 font-semibold px-6 py-3 hover:border-blue-600 hover:text-blue-600 transition-colors text-sm sm:text-base inline-block text-center"
             >
-              Request a Demo
+              Contact Us
             </Link>
           </div>
         </div>
@@ -388,8 +387,8 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex-1 w-full">
-                    <div className="relative h-64 sm:h-80 md:h-96 w-full rounded-2xl overflow-hidden border border-slate-200 bg-white p-4">
-                      <Image src={step.image} alt={step.title} fill className="object-contain" />
+                    <div className="relative h-64 sm:h-80 md:h-96 w-full rounded-2xl overflow-hidden border border-slate-200">
+                      <Image src={step.image} alt={step.title} fill className="object-cover" />
                     </div>
                   </div>
                 </div>
@@ -443,7 +442,7 @@ export default function Home() {
             })}
             </div>
 
-            <div className="relative h-64 sm:h-80 md:h-96 w-full rounded-2xl overflow-hidden border border-slate-200">
+            <div className="relative h-96 sm:h-[500px] md:h-[600px] lg:h-[700px] w-full rounded-2xl overflow-hidden border border-slate-200">
               <Image src={AfricaInfrastructureMap} alt="Energy assets" fill className="object-cover" />
             </div>
           </div>
@@ -486,94 +485,6 @@ export default function Home() {
                 By combining compliance-first architecture with blockchain innovation, we create pathways for African energy assets 
                 to access global capital markets while maintaining regulatory alignment.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Compliance Section */}
-      <section id="compliance" className="mt-12 md:mt-20 px-4 md:px-12 scroll-mt-24">
-        <div className="w-full max-w-7xl mx-auto py-10 md:py-20">
-          <div className="text-center mb-10 md:mb-16">
-            <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 leading-tight px-4">
-              Compliance Is <strong className="text-blue-400">Embedded by Design</strong>
-            </h2>
-            <p className="text-base md:text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto px-4">
-              Our platform is built from the ground up with compliance at its core, enabling institutional participation while maintaining regulatory alignment.
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl p-6 md:p-12 text-white text-center mb-10 md:mb-16">
-            <p className="text-lg sm:text-xl md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed px-4">
-              Built for <strong>collaboration with regulators</strong>, not circumvention. We enable compliant digital asset infrastructure that meets institutional standards.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-16">
-            {[
-              { icon: FaShieldAlt, title: "Permissioned Token Standards", description: "Built on open standards with embedded permission controls, ensuring only verified participants can interact with tokenized assets." },
-              { icon: FaLock, title: "Identity-Linked Asset Ownership", description: "Every asset token is linked to verified identities, creating an auditable trail and preventing unauthorized transfers." },
-              { icon: FaGlobe, title: "Jurisdiction-Aware Controls", description: "Platform automatically enforces jurisdiction-specific regulations, ensuring compliance across different legal frameworks." },
-              { icon: FaEye, title: "Regulator-Aligned Transparency", description: "Comprehensive reporting and audit trails provide regulators with full visibility into asset activity and ownership." },
-              { icon: FaHandshake, title: "Built for Collaboration", description: "Designed for collaboration with regulators, not circumvention. We work with regulatory bodies to ensure compliance." },
-              { icon: FaCheckCircle, title: "Institutional-Grade Compliance", description: "Enterprise-level compliance controls that meet the standards expected by institutional investors and regulators." },
-            ].map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-blue-400 bg-opacity-20 flex items-center justify-center mb-4 md:mb-6">
-                    <Icon className="text-blue-600 text-xl md:text-2xl" />
-                  </div>
-                  <h3 className="font-semibold text-lg md:text-xl mb-3 md:mb-4">{feature.title}</h3>
-                  <p className="text-sm md:text-base text-slate-600">{feature.description}</p>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-12 mb-10 md:mb-16">
-            <h3 className="font-semibold text-2xl sm:text-3xl mb-6 md:mb-8 text-center">Compliance Architecture</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              <div>
-                <h4 className="font-semibold text-lg md:text-xl mb-3 md:mb-4">Identity-Aware Asset Control</h4>
-                <p className="text-sm md:text-base text-slate-600 mb-3 md:mb-4">
-                  Every transaction requires verified identity, ensuring that only authorized parties can interact with tokenized assets.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-blue-600 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-sm md:text-base text-slate-900">KYC/AML integration</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-blue-600 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-sm md:text-base text-slate-900">Identity verification at onboarding</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-blue-600 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-sm md:text-base text-slate-900">Real-time identity validation</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg md:text-xl mb-3 md:mb-4">Regulatory Reporting</h4>
-                <p className="text-sm md:text-base text-slate-600 mb-3 md:mb-4">
-                  Comprehensive reporting tools provide regulators with full visibility into platform activity and asset flows.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-blue-600 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-sm md:text-base text-slate-900">Automated compliance reports</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-blue-600 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-sm md:text-base text-slate-900">Complete audit trails</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-blue-600 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-sm md:text-base text-slate-900">Regulator dashboard access</span>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -665,7 +576,7 @@ export default function Home() {
               Meet the <strong className="text-blue-400">Founder</strong>
             </h2>
             <p className="text-base md:text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto px-4">
-              Learn about the visionary behind Juggervault and the expertise driving compliant digital infrastructure for real-world assets.
+              The visionary behind Juggervault and the expertise driving compliant digital infrastructure for real-world assets.
             </p>
           </div>
 
@@ -680,9 +591,10 @@ export default function Home() {
                 <h3 className="font-semibold text-2xl sm:text-3xl md:text-4xl mb-3 md:mb-4">Henry Onyebuchi</h3>
                 <p className="text-lg md:text-xl text-slate-600 mb-4 md:mb-6">Founder & Chief Infrastructure Architect</p>
                 <p className="text-base md:text-lg text-slate-900 leading-relaxed mb-4 md:mb-6">
-                  Henry Onyebuchi is a blockchain infrastructure and security expert with extensive experience in designing 
-                  compliant digital systems for real-world assets. As a decentralized finance expert and security engineer, 
-                  he brings a unique combination of technical depth and regulatory understanding to the challenge of bridging 
+                  Henry Onyebuchi is a Senior Smart Contract Engineer, Security Researcher and blockchain infrastructure expert with extensive experience in designing 
+                  compliant digital systems for real-world assets. 
+                  
+                  As a decentralized finance expert with over 8 years of hands-on experience building DeFi solutions, he brings a unique combination of technical depth and regulatory understanding to the challenge of bridging 
                   physical assets with digital financial infrastructure.
                 </p>
                 <p className="text-base md:text-lg text-slate-900 leading-relaxed mb-4 md:mb-6">
@@ -701,13 +613,13 @@ export default function Home() {
                     <FaLinkedin className="text-blue-600" />
                   </a>
                   <a
-                    href="https://github.com/hendobox"
+                    href="https://twitter.com/_iamhoc"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-slate-200 flex items-center justify-center hover:bg-blue-400 hover:text-white transition-colors"
-                    aria-label="GitHub"
+                    aria-label="Twitter"
                   >
-                    <FaGithub className="text-blue-600" />
+                    <FaXTwitter className="text-blue-600" />
                   </a>
                 </div>
               </div>
@@ -763,81 +675,15 @@ export default function Home() {
               Explore Platforms
             </button>
             <Link
-              href="/demo"
+              href="/contact"
               className="w-full sm:w-auto rounded-[52px] bg-transparent border-2 border-white text-white font-semibold px-5 md:px-6 py-2.5 md:py-3 text-sm md:text-base hover:bg-white hover:text-blue-600 transition-colors text-center inline-block"
             >
-              Request Demo
+              Contact Us
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer id="footer" className="w-full bg-white mt-12 md:mt-20">
-        <div className="w-full px-4 md:px-10 py-8 md:py-10 max-w-3xl mx-auto">
-          <div className="mx-auto w-fit">
-            <Link href="/demo" className="py-2.5 md:py-3 px-3 md:px-4 rounded-[32px] bg-white border border-slate-200 flex items-center justify-evenly font-medium text-blue-500 text-sm md:text-base inline-block">
-              <GoDotFill className="text-blue-500" size={18} />
-              Get early access
-            </Link>
-          </div>
-
-          <div className="mt-6 md:mt-8">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl mx-auto w-fit font-medium text-slate-900 text-center px-4">Transform Your Assets Today</h3>
-          </div>
-
-          <form className="mt-6 md:mt-8">
-            <div className="bg-white w-full max-w-md mx-auto rounded-[49px] flex flex-col sm:flex-row items-stretch sm:items-center border border-slate-200 px-4 py-2 shadow-[csbtn] gap-2">
-              <div className="flex-1">
-                <input type="email" name="email" id="footerEmail" placeholder="Enter your email" className="w-full border-none outline-none text-sm md:text-base px-2" />
-              </div>
-              <Link
-                href="/demo"
-                className="rounded-[52px] bg-blue-600 text-white font-semibold px-4 md:px-6 py-2.5 md:py-3 hover:bg-blue-700 transition-colors text-sm md:text-base whitespace-nowrap inline-block"
-              >
-                Request Demo
-              </Link>
-            </div>
-          </form>
-
-          <div className="mt-10 md:mt-14">
-            <nav className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6 md:gap-0">
-              <ul className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-6">
-                <li className="w-full md:w-auto flex justify-center md:justify-start mb-2 md:mb-0">
-                  <Link href="/" className="flex items-center justify-start gap-2 hover:opacity-80 transition-opacity">
-                    <div className="relative h-6 w-6 md:h-8 md:w-28">
-                      <Image src={Logo} alt="Juggervault Logo" fill className="object-contain" priority />
-                    </div>
-                  </Link>
-                </li>
-                <li><button onClick={() => scrollToSection('platforms')} className="hover:text-blue-600 transition-colors text-slate-700 text-sm md:text-base">Platforms</button></li>
-                <li><Link href="/demo" className="hover:text-blue-600 transition-colors text-slate-700 text-sm md:text-base">Demo</Link></li>
-                <li><Link href="/contact" className="hover:text-blue-600 transition-colors text-slate-700 text-sm md:text-base">Contact</Link></li>
-              </ul>
-
-              <ul className="flex items-center justify-center md:justify-end gap-4">
-                <li>
-                  <a href="https://twitter.com/juggervault" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors" aria-label="X (Formerly Twitter)">
-                    <FaXTwitter size={20} />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://linkedin.com/company/juggervault" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors" aria-label="LinkedIn">
-                    <FaLinkedin size={20} />
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div className="mt-6 md:mt-8">
-            <div className="flex flex-col sm:flex-row items-center justify-between text-xs md:text-sm gap-2">
-              <p>Made with <em className="hidden">Love</em> &#x2764;&#xfe0f;</p>
-              <p>&copy; 2024 Juggervault. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

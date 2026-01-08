@@ -3,7 +3,11 @@
 import { useState, useRef, useEffect } from 'react';
 import { FaChevronDown } from 'react-icons/fa6';
 
-export function PlatformsDropdown() {
+interface PlatformsDropdownProps {
+  buttonStyle?: 'default' | 'primary';
+}
+
+export function PlatformsDropdown({ buttonStyle = 'default' }: PlatformsDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -36,18 +40,22 @@ export function PlatformsDropdown() {
     setIsOpen(false);
   };
 
+  const buttonClasses = buttonStyle === 'primary' 
+    ? "rounded-[52px] bg-blue-600 text-white font-semibold px-4 xl:px-6 py-2 xl:py-3 text-sm xl:text-base hover:bg-blue-700 transition-colors flex items-center gap-2"
+    : "flex items-center gap-2 text-slate-900 font-bold hover:text-blue-600 transition-colors";
+
   return (
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 text-slate-900 font-bold hover:text-blue-600 transition-colors"
+        className={buttonClasses}
       >
         Platforms
         <FaChevronDown className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} size={12} />
       </button>
       
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
+        <div className={`absolute ${buttonStyle === 'primary' ? 'right-0' : 'left-0'} top-full mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50`}>
           {platforms.map((platform) => (
             <button
               key={platform.name}
