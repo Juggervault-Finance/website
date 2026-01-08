@@ -2,30 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bg-main: #F9F9F9;
-  --bg-pry: #E5E7EB;
-  --fg-main: #171717;
-  --base-1: #000000;
-  --base-2: #FFFFFF;
-  --text-sec-1: #6B7280,
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --bg-main: #000000;
-    --bg-pry: #E5E7EB;
-    --fg-main: #EDEDED;
-    --base-1: #F9FAFB;
-    --base-2: #343434;
-    --text-sec-1: #9CA3AF;
-  }
-} */
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(248 250 252); /* slate-50 */
+  color: rgb(15 23 42); /* slate-900 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {

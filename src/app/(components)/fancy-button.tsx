@@ -6,12 +6,12 @@ type Props = {
 } & React.InputHTMLAttributes<HTMLButtonElement>;
 
 // Classes defined in tailwind.config.ts
-const buttonClasses = "py-3 px-4 rounded-[32px] bg-basic-100 border border-[#E7E7E7] flex items-center justify-evenly font-medium text-[#95B0FF]";
+const buttonClasses = "py-3 px-4 rounded-[32px] bg-white border border-slate-200 flex items-center justify-evenly font-medium text-blue-400";
 
 export const FancyButton = ({ label, ...props }: Props) => {
     return (
         <button className={classNames(buttonClasses)}>
-            <GoDotFill color="#95B0FF" size={20} />
+            <GoDotFill className="text-blue-400" size={20} />
             {label}
         </button>
     )
