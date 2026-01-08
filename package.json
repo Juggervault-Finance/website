@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NEXT_PRIVATE_SKIP_TURBO=1 next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "next build",
+    "tsc": "yarn node .yarn/sdks/typescript/lib/tsc.js"
   },
   "dependencies": {
     "classnames": "^2.5.1",
