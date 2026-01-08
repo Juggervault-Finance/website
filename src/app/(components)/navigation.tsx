@@ -19,8 +19,8 @@ export function Navigation() {
   };
 
   return (
-    <header className="w-full sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
-      <div className="w-full">
+    <header className="w-full sticky top-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-tech-cyan-500/30 tech-border">
+      <div className="w-full max-w-full">
         <div className="h-16 md:h-24">
           <div className="px-4 md:px-12 py-3 md:py-4 flex items-center justify-between">
             <div className="flex-shrink-0">
@@ -42,19 +42,19 @@ export function Navigation() {
 
             {/* Desktop Navigation - Centered */}
             <nav className="hidden lg:block flex-1 flex justify-center">
-              <ul className="flex items-center justify-center gap-6 xl:gap-10 text-slate-900 font-bold text-sm xl:text-base">
+              <ul className="flex items-center justify-center gap-6 xl:gap-10 text-gray-200 font-bold text-sm xl:text-base">
                 <li>
-                  <Link href="/" className="hover:text-blue-600 transition-colors">
+                  <Link href="/" className="hover:text-tech-cyan-400 transition-colors">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/compliance" className="hover:text-blue-600 transition-colors">
+                  <Link href="/compliance" className="hover:text-tech-cyan-400 transition-colors">
                     Compliance
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="hover:text-blue-600 transition-colors">
+                  <Link href="/contact" className="hover:text-tech-cyan-400 transition-colors">
                     Contact
                   </Link>
                 </li>
@@ -70,7 +70,7 @@ export function Navigation() {
             <div className="lg:hidden flex items-center gap-4">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-slate-900 hover:text-blue-600 transition-colors p-2"
+                className="text-gray-200 hover:text-tech-cyan-400 transition-colors p-2"
                 aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -80,22 +80,22 @@ export function Navigation() {
 
           {/* Mobile Navigation Menu */}
           {mobileMenuOpen && (
-            <div className="lg:hidden border-t border-slate-200 bg-white">
+            <div className="lg:hidden border-t border-tech-cyan-500/30 bg-gray-900/98 backdrop-blur-md">
               <nav className="px-4 py-4">
-                <ul className="flex flex-col gap-4 text-slate-900 font-bold">
+                <ul className="flex flex-col gap-4 text-gray-200 font-bold">
                   <li>
-                    <Link href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors w-full text-left py-2 block">
+                    <Link href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-tech-cyan-400 transition-colors w-full text-left py-2 block">
                       Home
                     </Link>
                   </li>
                   <li><PlatformsDropdown /></li>
                   <li>
-                    <Link href="/compliance" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors w-full text-left py-2 block">
+                    <Link href="/compliance" onClick={() => setMobileMenuOpen(false)} className="hover:text-tech-cyan-400 transition-colors w-full text-left py-2 block">
                       Compliance
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors w-full text-left py-2 block">
+                    <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-tech-cyan-400 transition-colors w-full text-left py-2 block">
                       Contact
                     </Link>
                   </li>

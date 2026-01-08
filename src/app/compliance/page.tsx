@@ -4,20 +4,20 @@ import { FaShieldAlt, FaLock, FaGlobe, FaEye, FaHandshake, FaCheckCircle } from 
 
 export default function CompliancePage() {
   return (
-    <div className="w-full py-10 md:py-20">
+    <div className="w-full max-w-full py-10 md:py-20 relative z-10">
       {/* Compliance Section */}
       <section className="px-4 md:px-12">
         <div className="w-full max-w-7xl mx-auto py-10 md:py-20">
           <div className="text-center mb-10 md:mb-16">
-            <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 leading-tight px-4">
-              Compliance Is <strong className="text-blue-400">Embedded by Design</strong>
+            <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 leading-tight px-4 text-gray-100">
+              Compliance Is <strong className="bg-gradient-to-r from-tech-cyan-400 to-diamond-blue-400 bg-clip-text text-transparent">Embedded by Design</strong>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto px-4">
+            <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4">
               Our platform is built from the ground up with compliance at its core, enabling institutional participation while maintaining regulatory alignment.
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl p-6 md:p-12 text-white text-center mb-10 md:mb-16">
+          <div className="bg-gradient-to-br from-diamond-blue-600 to-tech-cyan-600 rounded-2xl p-6 md:p-12 text-white text-center mb-10 md:mb-16 shadow-cube-glow">
             <p className="text-lg sm:text-xl md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed px-4">
               Built for <strong>collaboration with regulators</strong>, not circumvention. We enable compliant digital asset infrastructure that meets institutional standards.
             </p>
@@ -34,57 +34,57 @@ export default function CompliancePage() {
             ].map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <div key={index} className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-blue-400 bg-opacity-20 flex items-center justify-center mb-4 md:mb-6">
-                    <Icon className="text-blue-600 text-xl md:text-2xl" />
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm border border-tech-cyan-500/30 rounded-2xl p-6 md:p-8 hover:border-tech-cyan-400/50 hover:shadow-cube-glow transition-all tech-border">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-br from-diamond-blue-500/30 to-tech-cyan-500/30 border border-tech-cyan-500/30 flex items-center justify-center mb-4 md:mb-6">
+                    <Icon className="text-tech-cyan-400 text-xl md:text-2xl" />
                   </div>
-                  <h3 className="font-semibold text-lg md:text-xl mb-3 md:mb-4">{feature.title}</h3>
-                  <p className="text-sm md:text-base text-slate-600">{feature.description}</p>
+                  <h3 className="font-semibold text-lg md:text-xl mb-3 md:mb-4 text-gray-100">{feature.title}</h3>
+                  <p className="text-sm md:text-base text-gray-300">{feature.description}</p>
                 </div>
               );
             })}
           </div>
 
-          <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-12 mb-10 md:mb-16">
-            <h3 className="font-semibold text-2xl sm:text-3xl mb-6 md:mb-8 text-center">Compliance Architecture</h3>
+          <div className="bg-gray-800/50 backdrop-blur-sm border border-tech-cyan-500/30 rounded-2xl p-6 md:p-12 mb-10 md:mb-16 tech-border">
+            <h3 className="font-semibold text-2xl sm:text-3xl mb-6 md:mb-8 text-center text-gray-100">Compliance Architecture</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <div>
-                <h4 className="font-semibold text-lg md:text-xl mb-3 md:mb-4">Identity-Aware Asset Control</h4>
-                <p className="text-sm md:text-base text-slate-600 mb-3 md:mb-4">
+                <h4 className="font-semibold text-lg md:text-xl mb-3 md:mb-4 text-gray-100">Identity-Aware Asset Control</h4>
+                <p className="text-sm md:text-base text-gray-300 mb-3 md:mb-4">
                   Every transaction requires verified identity, ensuring that only authorized parties can interact with tokenized assets.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-blue-600 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-sm md:text-base text-slate-900">KYC/AML integration</span>
+                    <FaCheckCircle className="text-tech-cyan-400 mt-1 flex-shrink-0" size={18} />
+                    <span className="text-sm md:text-base text-gray-200">KYC/AML integration</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-blue-600 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-sm md:text-base text-slate-900">Identity verification at onboarding</span>
+                    <FaCheckCircle className="text-tech-cyan-400 mt-1 flex-shrink-0" size={18} />
+                    <span className="text-sm md:text-base text-gray-200">Identity verification at onboarding</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-blue-600 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-sm md:text-base text-slate-900">Real-time identity validation</span>
+                    <FaCheckCircle className="text-tech-cyan-400 mt-1 flex-shrink-0" size={18} />
+                    <span className="text-sm md:text-base text-gray-200">Real-time identity validation</span>
                   </li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-lg md:text-xl mb-3 md:mb-4">Regulatory Reporting</h4>
-                <p className="text-sm md:text-base text-slate-600 mb-3 md:mb-4">
+                <h4 className="font-semibold text-lg md:text-xl mb-3 md:mb-4 text-gray-100">Regulatory Reporting</h4>
+                <p className="text-sm md:text-base text-gray-300 mb-3 md:mb-4">
                   Comprehensive reporting tools provide regulators with full visibility into platform activity and asset flows.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-blue-600 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-sm md:text-base text-slate-900">Automated compliance reports</span>
+                    <FaCheckCircle className="text-tech-cyan-400 mt-1 flex-shrink-0" size={18} />
+                    <span className="text-sm md:text-base text-gray-200">Automated compliance reports</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-blue-600 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-sm md:text-base text-slate-900">Complete audit trails</span>
+                    <FaCheckCircle className="text-tech-cyan-400 mt-1 flex-shrink-0" size={18} />
+                    <span className="text-sm md:text-base text-gray-200">Complete audit trails</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-blue-600 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-sm md:text-base text-slate-900">Regulator dashboard access</span>
+                    <FaCheckCircle className="text-tech-cyan-400 mt-1 flex-shrink-0" size={18} />
+                    <span className="text-sm md:text-base text-gray-200">Regulator dashboard access</span>
                   </li>
                 </ul>
               </div>

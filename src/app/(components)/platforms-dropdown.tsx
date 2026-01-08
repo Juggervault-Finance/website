@@ -41,8 +41,8 @@ export function PlatformsDropdown({ buttonStyle = 'default' }: PlatformsDropdown
   };
 
   const buttonClasses = buttonStyle === 'primary' 
-    ? "rounded-[52px] bg-blue-600 text-white font-semibold px-4 xl:px-6 py-2 xl:py-3 text-sm xl:text-base hover:bg-blue-700 transition-colors flex items-center gap-2"
-    : "flex items-center gap-2 text-slate-900 font-bold hover:text-blue-600 transition-colors";
+    ? "rounded-[52px] bg-gradient-to-r from-diamond-blue-600 to-tech-cyan-600 text-white font-semibold px-4 xl:px-6 py-2 xl:py-3 text-sm xl:text-base hover:shadow-cube-glow transition-all flex items-center gap-2 shadow-cube"
+    : "flex items-center gap-2 text-gray-200 font-bold hover:text-tech-cyan-400 transition-colors";
 
   return (
     <div className="relative" ref={dropdownRef}>
@@ -55,15 +55,15 @@ export function PlatformsDropdown({ buttonStyle = 'default' }: PlatformsDropdown
       </button>
       
       {isOpen && (
-        <div className={`absolute ${buttonStyle === 'primary' ? 'right-0' : 'left-0'} top-full mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50`}>
+        <div className={`absolute ${buttonStyle === 'primary' ? 'right-0' : 'left-0'} top-full mt-2 w-56 bg-gray-800/95 backdrop-blur-md rounded-lg shadow-cube border border-tech-cyan-500/30 py-2 z-50 tech-border`}>
           {platforms.map((platform) => (
             <button
               key={platform.name}
               onClick={(e) => handlePlatformClick(platform, e)}
-              className={`w-full text-left px-4 py-3 hover:bg-slate-100 transition-colors font-medium text-sm flex items-center justify-between ${
+              className={`w-full text-left px-4 py-3 hover:bg-gray-700/50 transition-colors font-medium text-sm flex items-center justify-between ${
                 platform.available 
-                  ? 'text-slate-900 hover:text-blue-600' 
-                  : 'text-slate-400 cursor-not-allowed'
+                  ? 'text-gray-200 hover:text-tech-cyan-400' 
+                  : 'text-gray-500 cursor-not-allowed'
               }`}
             >
               <span>{platform.name}</span>

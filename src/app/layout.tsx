@@ -22,14 +22,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased" suppressHydrationWarning>
-        <div className="w-full relative max-h-screen h-screen bg-slate-50 overflow-scroll">
-          <Navigation />
-          <main>
-            {children}
-          </main>
-          <Footer />
+    <html lang="en" className="w-full overflow-x-hidden">
+      <body className="antialiased w-full overflow-x-hidden" suppressHydrationWarning>
+        <div className="w-full relative min-h-screen">
+          <div className="relative z-10 w-full">
+            <Navigation />
+            <main className="relative z-10 w-full">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
